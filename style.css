@@ -1,1 +1,27 @@
 
+*{
+    margin: 10px;
+    padding: 10px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.cabeçalho {
+    background-image: linear-gradient(#e292c3),#d888d6;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.cabecalho-titulo{
+    display: inline-block;
+    margin: 0 16px;
+    font-size: 16px;
+}
+
+.imagem{
+    border-image: 5%;
+    width: 65%;
+}
