@@ -15,7 +15,7 @@ body {
     padding: 24px 0;
 }
 
-.cabecalho-titulo{
+.cabeçalho-titulo{
     display: inline-block;
     margin: 0 16px;
     font-size: 16px;
@@ -24,4 +24,17 @@ body {
 .imagem{
     border-image: 5%;
     width: 65%;
+}
+
+.imagem-2{
+    width: 40%;
+
+}
+
+.imagem-3{
+    width: 40%;
+}
+
+.imagens-drones{
+ justify-content: flex-end;
 }
