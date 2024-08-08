@@ -5,10 +5,11 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #d888d6;
 }
 .cabeçalho {
-    background-image: linear-gradient(#e292c3),#d888d6;
-    color: white;
+    background: linear-gradient(#e292c3),#d888d6;
+    color: rgb(62, 11, 81);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -37,4 +38,8 @@ body {
 
 .imagens-drones{
  justify-content: flex-end;
+}
+.footer{
+    background-color:black;
+    color: white;
 }
