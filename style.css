@@ -20,11 +20,13 @@ body {
     display: inline-block;
     margin: 0 16px;
     font-size: 16px;
+    
 }
 
 .imagem{
     border-image: 5%;
     width: 65%;
+    
 }
 
 .imagem-2{
@@ -42,4 +44,8 @@ body {
 .footer{
     background-color:black;
     color: white;
+}
+
+.informações-texto{
+    text-align: justify;
 }
