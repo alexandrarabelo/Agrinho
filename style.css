@@ -5,11 +5,11 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #d888d6;
+    background-color: #e2e1ee;
 }
 .cabeçalho {
-    background: linear-gradient(#e292c3),#d888d6;
-    color: rgb(62, 11, 81);
+    background: linear-gradient(#072f0d),#0d3111;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     align-items: center;
