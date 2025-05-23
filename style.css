@@ -25,7 +25,7 @@ body {
 
 .imagem{
     border-image: 5%;
-    width: 65%;
+    width: 20%;
     
 }
 
@@ -48,6 +48,7 @@ body {
 
 .informações-texto{
     text-align: justify;
+    font-size: 20px;
 }
 
 footer{
