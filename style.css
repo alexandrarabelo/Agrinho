@@ -3,12 +3,15 @@
     margin: 10px;
     padding: 10px;
 }
-body {
-    font-family: 'Poppins', sans-serif;
+
+   body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
     background-color: #e2e1ee;
 }
-.cabeçalho {
-    background: linear-gradient(#072f0d),#0d3111;
+
+    .cabeçalho {
+    background: linear-gradient(to right, #072f0d, #0d3111);
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
@@ -23,22 +26,18 @@ body {
     
 }
 
-.imagem{
-    border-image: 5%;
-    width: 20%;
-    
+.imagem {
+    border-radius: 50%;
+    width: 50%;
 }
 
 .imagem-2{
-    width: 40%;
+    width: 60%;
 
 }
 
-.imagem-3{
-    width: 40%;
-}
 
-.imagens-drones{
+.imagem-exposição{
  justify-content: flex-end;
 }
 .footer{
@@ -53,4 +52,93 @@ body {
 
 footer{
     font-size: 10px;
+}
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+
+.formulario button {
+    background-color: #CB6D43;
+    border: none;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #F1EDEF;
+}
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --laranja-claro: #FF862A;
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #ffd700;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+
+section {
+    padding-bottom: 5rem;
+}
+
+text center{
+    font-size: 40px;
 }
