@@ -1,128 +1,9 @@
 
-*{
-    margin: 10px;
-    padding: 10px;
-}
-
-   body {
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #e2e1ee;
-}
-
-    .cabeçalho {
-    background: linear-gradient(to right, #072f0d, #0d3111);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 24px 0;
-}
-
-.cabeçalho-titulo{
-    display: inline-block;
-    margin: 0 16px;
-    font-size: 16px;
-    
-}
-
-.imagem {
-    border-radius: 50%;
-    width: 50%;
-}
-
-.imagem-2{
-    width: 60%;
-
-}
-
-
-.imagem-exposição{
- justify-content: flex-end;
-}
-.footer{
-    background-color:black;
-    color: white;
-}
-
-.informações-texto{
-    text-align: justify;
-    font-size: 20px;
-}
-
-footer{
-    font-size: 10px;
-}
-.alto-contraste{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
-}
-
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste .formulario{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
-}
-
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
-}
-
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary{
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
-}
-
-
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
-}
-
-.opcoes-acessibilidade{
-    margin-top:10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
-}
-.apresenta-lista{
-    display: none;
-}
-
-
-.formulario button {
-    background-color: #CB6D43;
-    border: none;
-    font-weight: bold;
-}
-
-.form-control {
-    background-color: #F1EDEF;
-}
-.menu-acessibilidade{
-    position: fixed;
-    top:2rem;
-    right:20px;
-    z-index: 1000;
-}
-
-
-.esquerda-conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
+/* Importação de Fontes (Melhor no início do arquivo) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap'); /* Não utilizada no body, mas mantida caso seja usada em outro lugar */
 
+/* Variáveis CSS */
 :root {
     --laranja-claro: #FF862A;
     --alto-contraste-fundo: #000000;
@@ -130,15 +11,281 @@ footer{
     --alto-contraste-link: #ffd700;
 }
 
-header {
-    background-color: #ffffff;
+/* --- Estilos Globais e Reset Básico --- */
+/* Cuidado com o reset universal, ele pode ser muito abrangente. 
+   O ideal seria usar um reset mais específico ou uma biblioteca de reset.
+   Aqui, vou mantê-lo, mas alertando sobre o impacto. */
+* {
+    margin: 0; /* Geralmente é melhor zerar e adicionar espaçamento onde necessário */
+    padding: 0; /* Geralmente é melhor zerar e adicionar espaçamento onde necessário */
+    box-sizing: border-box; /* Adiciona essa propriedade importante para o box model */
 }
 
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e2e1ee;
+    line-height: 1.6; /* Melhora a legibilidade */
+    color: #333; /* Cor de texto padrão */
+}
+
+/* --- Estilos do Cabeçalho --- */
+.cabeçalho { /* Mantendo o nome original do HTML */
+    background: linear-gradient(to right, #072f0d, #0d3111);
+    color: rgb(255, 255, 255);
+    /* As propriedades de flexbox foram movidas para o container dentro do HTML,
+       conforme o código HTML que você forneceu anteriormente. 
+       Se a intenção for que o próprio cabeçalho seja um flex container, ajuste aqui. */
+    padding: 24px 0; /* Mantém o padding vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+.cabeçalho-titulo { /* Mantendo o nome original do HTML */
+    /* Este estilo pode ser sobrescrito pelo Bootstrap dependendo da ordem e especificidade.
+       Verifique se é o comportamento desejado. */
+    margin: 0 16px;
+    font-size: 2.5rem; /* Aumentado para um título de cabeçalho */
+    text-align: center;
+    flex-grow: 1; /* Permite que o título ocupe o espaço disponível */
+}
+
+/* --- Estilos de Imagens --- */
+.imagem { /* Para a imagem principal (agroquemove.webp) */
+    border-radius: 50%;
+    width: 50%; /* Considere usar max-width para melhor responsividade */
+    height: auto; /* Garante proporção */
+    display: block; /* Para centralizar com margin auto, se necessário */
+    margin: 0 auto; /* Centraliza a imagem se ela for um elemento de bloco */
+    max-width: 400px; /* Limita o tamanho máximo da imagem */
+}
+
+.imagem-2 { /* Para a imagem da ExpoLondrina */
+    width: 100%; /* Geralmente, para imagens em seções de conteúdo, émelhor usar 100% ou max-width */
+    height: auto; /* Garante proporção */
+    display: block;
+    margin: 0 auto;
+    max-width: 600px; /* Exemplo de limite de tamanho */
+}
+
+.imagem-exposicao { /* Consistência com o nome da classe no HTML (imagem-exposicao, não imagem-exposição) */
+    /* O justify-content em um elemento que não é flex container não tem efeito.
+       Se a ideia é centralizar o conteúdo dentro dele, use text-align ou flexbox no pai.
+       Como a imagem-2 já tem margin: 0 auto, este pode ser redundante se o pai não for flex. */
+    display: flex; /* Transforma o contêiner em flex para justificar o conteúdo */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    /* flex-end foi alterado para center para centralizar a imagem */
+}
+
+/* --- Estilos de Seções de Conteúdo --- */
+.informacoes { /* Mantendo o nome original do HTML */
+    padding: 2rem 1rem; /* Adiciona padding interno à seção */
+}
+
+.informacoes h2,
+.informacoes h3 {
+    color: #072f0d; /* Cor para os títulos das seções */
+    margin-bottom: 1.5rem;
+}
+
+.informacoes-texto { /* Mantendo o nome original do HTML */
+    text-align: justify;
+    font-size: 1.15rem; /* Ajuste para melhor legibilidade */
+    margin-bottom: 1rem; /* Espaçamento entre parágrafos */
+}
 
 section {
-    padding-bottom: 5rem;
+    padding: 2rem 0; /* Padding mais consistente para seções */
 }
 
-text center{
-    font-size: 40px;
+/* Correção de sintaxe */
+.text-center { /* Assumo que você queria estilizar algo com a classe text-center do Bootstrap */
+    font-size: 2.5rem; /* Exemplo: um tamanho maior para um texto centralizado */
+    color: #072f0d;
 }
+
+/* --- Estilos do Rodapé --- */
+/* Consolidação do footer, removendo a duplicação */
+footer {
+    background-color: black; /* Agora a cor de fundo vem daqui */
+    color: white; /* Agora a cor do texto vem daqui */
+    padding: 1.5rem 0; /* Aumentei o padding para ficar mais agradável */
+    font-size: 0.8rem; /* Ajustado para um tamanho de fonte mais legível no rodapé */
+    text-align: center; /* Garante que o texto esteja centralizado */
+    /* A classe Bootstrap bg-light e mt-5 adicionadas no HTML já cuidam de fundo e margem */
+}
+
+
+/* --- Estilos de Acessibilidade --- */
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    padding: 10px 15px; /* Ajuste de padding para o botão rotacionado */
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* Adicionado box-shadow para destacá-lo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white; /* Fundo branco para as opções */
+    padding: 10px;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    /* Consistência no estilo dos botões */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.apresenta-lista { /* Esta classe deve controlar a visibilidade via JS */
+    display: none; /* Por padrão, deve estar oculto */
+    /* Quando o JS adicionar/remover, ela controlará a visibilidade. */
+}
+
+/* --- Estilos de Alto Contraste --- */
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo) !important; /* Use !important para garantir a sobrescrita */
+    color: var(--alto-contraste-texto) !important;
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+}
+
+.alto-contraste .nav-link {
+    color: var(--alto-contraste-link) !important;
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary {
+    background-color: var(--alto-contraste-link) !important;
+    color: var(--alto-contraste-fundo) !important;
+    border-color: var(--alto-contraste-link) !important; /* Garante que a borda também mude */
+}
+
+/* --- Estilos de Formulário (se aplicável, pois não vi o formulário no HTML fornecido) --- */
+.formulario button {
+    background-color: #CB6D43;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-control {
+    background-color: #F1EDEF;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* --- Layout Adicional (se aplicável) --- */
+.esquerda-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* --- Media Queries (para responsividade, se necessário) --- */
+@media (max-width: 768px) {
+    .cabeçalho {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .cabeçalho-titulo {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .menu-acessibilidade {
+        position: static; /* Remove o position fixed em telas menores */
+        margin-top: 15px;
+        right: auto;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .rotacao-botao {
+        transform: none; /* Remove a rotação em telas menores */
+        transform-origin: center;
+    }
+
+    .opcoes-acessibilidade {
+        align-items: center; /* Centraliza botões em telas menores */
+    }
+
+    .informacoes-texto {
+        font-size: 1rem;
+    }
+
+    .imagem,
+    .imagem-2 {
+        width: 90%; /* Ajusta o tamanho da imagem para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .cabeçalho-titulo {
+        font-size: 1.5rem;
+    }
+
+    .informacoes h2,
+    .informacoes h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Para esconder/mostrar as opções */
+.opcoes-acessibilidade.apresenta-lista { /* Esta classe deve ser o display:none padrão */
+    display: none;
+}
+/* Quando o JS remover "apresenta-lista", ele aparecerá. 
+   Ou, se você quiser um default hidden, remova o .apresenta-lista e use: */
+/* .opcoes-acessibilidade { display: none; } */
+/* .opcoes-acessibilidade.mostrar { display: flex; } */
+/* (Nesse caso, o JS usaria .toggle('mostrar') em vez de .toggle('apresenta-lista')) */
+
+
+/* Exemplo de estilos para alto contraste no body (pode ser mais abrangente) */
+.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+.alto-contraste h1,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste p,
+.alto-contraste li {
+    color: #fff !important; /* Garante que o texto fique branco */
+}
+
+.alto-contraste a,
+.alto-contraste button {
+    color: #ffd700 !important; /* Links e botões em amarelo dourado */
+    background-color: #333 !important; /* Fundo mais escuro para botões */
+    border-color: #ffd700 !important;
+}
+
+/* ... mais estilos de alto contraste para outros elementos */
