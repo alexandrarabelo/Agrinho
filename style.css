@@ -32,7 +32,7 @@ body {
 /* --- Estilos do Cabeçalho --- */
 .cabeçalho { /* Mantendo o nome original do HTML */
     background: linear-gradient(to right, #072f0d, #0d3111);
-    color: rgb(255, 255, 255);
+    color: rgba(22, 78, 20, 0.459);
     /* As propriedades de flexbox foram movidas para o container dentro do HTML,
        conforme o código HTML que você forneceu anteriormente. 
        Se a intenção for que o próprio cabeçalho seja um flex container, ajuste aqui. */
@@ -50,17 +50,18 @@ body {
 }
 
 /* --- Estilos de Imagens --- */
-.imagem { /* Para a imagem principal (agroquemove.webp) */
-    border-radius: 50%;
-    width: 50%; /* Considere usar max-width para melhor responsividade */
+
+.imagem { /* Para a imagem da agro que move */
+    width: 100%; /* Geralmente, para imagens em seções de conteúdo, é melhor usar 100% ou max-width */
     height: auto; /* Garante proporção */
-    display: block; /* Para centralizar com margin auto, se necessário */
-    margin: 0 auto; /* Centraliza a imagem se ela for um elemento de bloco */
-    max-width: 400px; /* Limita o tamanho máximo da imagem */
+    display: block;
+    margin: 0 auto;
+    max-width: 600px; /* Exemplo de limite de tamanho */
 }
 
+
 .imagem-2 { /* Para a imagem da ExpoLondrina */
-    width: 100%; /* Geralmente, para imagens em seções de conteúdo, émelhor usar 100% ou max-width */
+    width: 100%; /* Geralmente, para imagens em seções de conteúdo, é melhor usar 100% ou max-width */
     height: auto; /* Garante proporção */
     display: block;
     margin: 0 auto;
