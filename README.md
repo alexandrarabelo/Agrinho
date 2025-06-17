@@ -10,4 +10,6 @@ Site criado por Alexandra Rabelo, aluna da 3ª série do Ensino Médio do Colég
 # Links de acesso:
 https://agrinho-wheat-nine.vercel.app/
 
+https://alexandrarabelo.github.io/Agrinho/
+
 
