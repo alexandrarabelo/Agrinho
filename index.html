@@ -21,23 +21,21 @@
     <header class="cabecalho p-5">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
             <h1 class="cabecalho-titulo text-center text-md-start mb-3 mb-md-0">FESTEJANDO A CONEXÃO CAMPO E CIDADE</h1>
-            <nav id="acessibilidade" class="menu-acessibilidade">
-                <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false"
-                    aria-controls="opcoes-acessibilidade">Acessibilidade</button>
-                <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                    <button id="aumentar-fonte" class="btn btn-primary fw-bold"
-                        aria-label="Aumentar o tamanho da fonte">A+</button>
-                    <button id="diminuir-fonte" class="btn btn-primary fw-bold"
-                        aria-label="Diminuir o tamanho da fonte">A-</button>
-                    <button id="alterna-contraste" class="btn btn-primary fw-bold"
-                        aria-label="Alternar o contraste de cores"> <i class="bi bi-shadows"></i></button>
-                </div>
-            </nav>
-        </div>
     </header>
+    <div id="acessibilidade" class="menu-acessibilidade">
+        <button id="botao-acessibilidade" class="btn btn-primary fw-bold rotacao-botao"
+            aria-expanded="false">Acessibilidade</button>
+        <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
+            <button id="aumentar-fonte" class="btn btn-primary fw-bold"
+                aria-label="Aumentar o tamanho da fonte">A+</button>
+            <button id="diminuir-fonte" class="btn btn-primary fw-bold"
+                aria-label="Diminuir o tamanho da fonte">A-</button>
+            <button id="alterna-contraste" class="btn btn-primary fw-bold"><i class="bi bi-shadows"></i></button>
+        </div>
+    </div>
 
     <main>
-        <section class="informacoes container my-5">
+        <section class="informacoes container">
             <h2 class="text-center mb-4">AGRONOMIA: UMA ALIANÇA COM A CIDADE</h2>
 
             <p class="informacoes-texto">Em um mundo cada vez mais urbanizado, onde o ritmo frenético das cidades dita
@@ -140,8 +138,8 @@
         </section>
     </main>
 
-    <footer class="text-center p-3 fst-italic bg-light mt-5">
-        <p class="mb-0">Desenvolvido por Alexandra. Projeto fictício sem fins comerciais.</p>
+    <footer>
+        <p>Desenvolvido por Alexandra. Projeto fictício sem fins comerciais.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" defer></script>

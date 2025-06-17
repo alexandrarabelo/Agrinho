@@ -4,7 +4,7 @@
 :root {
     --alto-contraste-fundo: #000000;
     --alto-contraste-texto: #ffffff;
-    --alto-contraste-link: #ffd700;
+    --alto-contraste-link: #e65266;
 }
 
 * {
@@ -14,14 +14,17 @@
 }
 
 body {
-    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     background-color: #e2e1ee;
     line-height: 1.6;
     color: #333;
 }
 
-/* --- Estilos do Cabeçalho --- */
+header{
+    background-color: rgba(51, 3, 70, 0.478);
+    color: #fff;
+    padding: 20px 0;
+}
 .cabeçalho {
     background: linear-gradient(to right, #072f0d, #0d3111);
     color: rgba(22, 78, 20, 0.459);
@@ -31,12 +34,9 @@ body {
 
 .cabeçalho-titulo {
     margin: 0 16px;
-    font-size: 1rem;
     text-align: center;
     flex-grow: 1;
 }
-
-/* --- Estilos de Imagens --- */
 
 .imagem {
     width: 100%;
@@ -67,7 +67,6 @@ body {
 
 .informacoes-texto {
     text-align: justify;
-    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -76,24 +75,20 @@ section {
 }
 
 .text-center {
-    font-size: 2.5rem;
     color: #072f0d;
 }
 
-/* --- Estilos do Rodapé --- */
 footer {
-    background-color: black;
+    background-color: rgba(51, 3, 70, 0.478);
     color: white;
-    padding: 1.5rem 0;
+    padding: 0.2rem;
 }
 
 footer p {
-    font-size: 1rem;
     text-align: center;
 }
 
 
-/* --- Estilos de Acessibilidade --- */
 .menu-acessibilidade {
     position: fixed;
     top: 2rem;
@@ -129,29 +124,28 @@ footer p {
     display: none;
 }
 
-/* --- Estilos de Alto Contraste --- */
 .alto-contraste {
-    background-color: var(--alto-contraste-fundo) !important;
-    color: var(--alto-contraste-texto) !important;
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
 }
 
 .alto-contraste header,
 .alto-contraste footer,
 .alto-contraste .formulario {
-    background-color: var(--alto-contraste-fundo) !important;
-    color: var(--alto-contraste-texto) !important;
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-texto);
 }
 
 .alto-contraste .nav-link {
-    color: var(--alto-contraste-link) !important;
+    color: var(--alto-contraste-link);
 }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
 .alto-contraste .btn-primary {
-    background-color: var(--alto-contraste-link) !important;
-    color: var(--alto-contraste-fundo) !important;
-    border-color: var(--alto-contraste-link) !important;
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo);
+    border-color: var(--alto-contraste-link);
 }
 
 .formulario button {
